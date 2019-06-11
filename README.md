@@ -59,6 +59,7 @@
 |51 | [What is a promise?](#what-is-a-promise)|
 |52 | [Why do you need a promise?](#why-do-you-need-a-promise)|
 |53 | [What are the three states of promise?](#what-are-the-three-states-of-promise)|
+|54 | [What is a callback function?](#what-is-a-callback-function)|
 
 1. ### What are the possible ways to create objects in JavaScript?
 
@@ -678,6 +679,23 @@ function userDetails(username) {
     Promises are used to handle asynchronous operations. They provide an alternative approach for callbacks by reducing the callback hell and writing the cleaner code.
 53. ### What are the three states of promise?
     Promises have three states:
-    1. Pending: This is an initial state of the Promise before an operation begins
-    2. Fulfilled: This state indicates that specified operation was completed.
-    3. Rejected: This state indicates that the operation did not complete. In this case an error value will be thrown.
+    1. **Pending:** This is an initial state of the Promise before an operation begins
+    2. **Fulfilled:** This state indicates that specified operation was completed.
+    3. **Rejected:** This state indicates that the operation did not complete. In this case an error value will be thrown.
+54. ### What is a callback function?
+    A callback function is a function passed into another function as an argument. This function is invoked inside the outer function to complete an action.
+    Let's take a simple example of how to use callback function
+    ```javascript
+    function callbackFunction(name) {
+      console.log('Hello ' + name);
+    }
+
+    function outerFunction(callback) {
+      let name = prompt('Please enter your name.');
+      callback(name);
+    }
+
+    outerFunction(callbackFunction);
+    ```
+
+
